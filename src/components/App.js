@@ -12,6 +12,7 @@ import Chart from "./Chart/Chart";
 
 // This is our fake data...
 import {notes1, notes2} from './Notes/data';
+import Animation from "./Animation/Animation";
 
 class App extends Component {
     constructor() {
@@ -56,6 +57,7 @@ class App extends Component {
             <div className="App">
                 <Header title="The new header title"/>
                 <Content>
+                    <Animation/>
                     <Chart
                         columns={this.columns}
                         chartType={this.state.chartType}
