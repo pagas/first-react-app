@@ -4,14 +4,17 @@ import Header from "../shared/components/layout/Header";
 //import Home from '../components/Home/Home';
 import Footer from "../shared/components/layout/Footer";
 import Content from "../shared/components/layout/Content";
-import Todo from "./Todo/Todo";
+//import Todo from "./Todo/Todo";
+import Timer from "./Pomodoro/Timer";
+
 
 function App() {
     return (
         <div className="App">
             <Header title="The new header title"/>
             <Content>
-                <Todo/>
+
+                <Timer/>
             </Content>
             <Footer/>
         </div>
