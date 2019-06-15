@@ -21,6 +21,12 @@ class Notes extends Component {
         }
     }
 
+    componentWillUnmount() {
+        console.log('Hasta la vista baby!');
+        document.body.style = 'background: black;';
+        document.getElementById('unmountMessage').style.color = 'white';
+    }
+
     componentWillReceiveProps(nextProps) {
         // If the prop notes has changed...
         if (nextProps.notes !== this.props.notes) {

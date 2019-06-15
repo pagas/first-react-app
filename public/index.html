@@ -23,11 +23,27 @@
             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
     />
+      
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <button
+            id="unmount"
+            style="margin:0 auto;display:block;background:red;color:white;"
+    >
+        Unmount
+    </button>
+
     <div id="root"></div>
+
+
+    <div id="unmountMessage">There is no mounted component!</div>
+
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

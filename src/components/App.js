@@ -8,6 +8,7 @@ import Todo from "./Todo/Todo";
 import Timer from "./Pomodoro/Timer";
 import Coins from "./Coins/Coins";
 import Notes from "./Notes/Notes";
+import Chart from "./Chart/Chart";
 
 // This is our fake data...
 import {notes1, notes2} from './Notes/data';
@@ -17,9 +18,27 @@ class App extends Component {
         super();
         // The first time we load the notes1...
         this.state = {
-            notes: notes1
+            notes: notes1,
+            chartType: 'line'
         };
 
+        this.columns = [
+            ['BTC', 3000, 6000, 10000, 15000, 13000, 11000],
+            ['ETH', 2000, 3000, 5000, 4000, 3000, 940],
+            ['XRP', 100, 200, 300, 500, 400, 300],
+        ];
+    }
+
+    setBarChart = () => {
+        this.setState({
+            chartType: 'bar'
+        });
+    }
+
+    setLineChart = () => {
+        this.setState({
+            chartType: 'line'
+        });
     }
 
     componentDidMount() {
@@ -37,7 +56,16 @@ class App extends Component {
             <div className="App">
                 <Header title="The new header title"/>
                 <Content>
+                    <Chart
+                        columns={this.columns}
+                        chartType={this.state.chartType}
+                    />
 
+                    <p>
+                        Chart Type
+                        <button onClick={this.setBarChart}>Bar</button>
+                        <button onClick={this.setLineChart}>Line</button>
+                    </p>
                     <Notes notes={this.state.notes}/>
                     <Coins/>
                     <Timer/>
