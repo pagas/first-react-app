@@ -13,6 +13,7 @@ import Chart from "./Chart/Chart";
 // This is our fake data...
 import {notes1, notes2} from './Notes/data';
 import Animation from "./Animation/Animation";
+import Numbers from "./Numbers/Numbers";
 
 class App extends Component {
     constructor() {
@@ -57,22 +58,24 @@ class App extends Component {
             <div className="App">
                 <Header title="The new header title"/>
                 <Content>
-                    <Animation/>
-                    <Chart
-                        columns={this.columns}
-                        chartType={this.state.chartType}
-                    />
 
-                    <p>
-                        Chart Type
-                        <button onClick={this.setBarChart}>Bar</button>
-                        <button onClick={this.setLineChart}>Line</button>
-                    </p>
-                    <Notes notes={this.state.notes}/>
-                    <Coins/>
-                    <Timer/>
-                    <Todo/>
-                    <Home/>
+                    <Numbers/>
+                    {/*<Animation/>*/}
+                    {/*<Chart*/}
+                        {/*columns={this.columns}*/}
+                        {/*chartType={this.state.chartType}*/}
+                    {/*/>*/}
+
+                    {/*<p>*/}
+                        {/*Chart Type*/}
+                        {/*<button onClick={this.setBarChart}>Bar</button>*/}
+                        {/*<button onClick={this.setLineChart}>Line</button>*/}
+                    {/*</p>*/}
+                    {/*<Notes notes={this.state.notes}/>*/}
+                    {/*<Coins/>*/}
+                    {/*<Timer/>*/}
+                    {/*<Todo/>*/}
+                    {/*<Home/>*/}
                 </Content>
                 <Footer/>
             </div>
