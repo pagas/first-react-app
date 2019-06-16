@@ -1,19 +1,21 @@
 import React, {Component} from 'react';
 import '../App.css';
 import Header from "../shared/components/layout/Header";
-import Home from '../components/Home/Home';
 import Footer from "../shared/components/layout/Footer";
 import Content from "../shared/components/layout/Content";
-import Todo from "./Todo/Todo";
-import Timer from "./Pomodoro/Timer";
-import Coins from "./Coins/Coins";
-import Notes from "./Notes/Notes";
-import Chart from "./Chart/Chart";
+// import Home from '../components/Home/Home';
+// import Todo from "./Todo/Todo";
+// import Timer from "./Pomodoro/Timer";
+// import Coins from "./Coins/Coins";
+// import Notes from "./Notes/Notes";
+// import Chart from "./Chart/Chart";
+// import Animation from "./Animation/Animation";
+// import Numbers from "./Numbers/Numbers";
+
 
 // This is our fake data...
 import {notes1, notes2} from './Notes/data';
-import Animation from "./Animation/Animation";
-import Numbers from "./Numbers/Numbers";
+import Xss from "./Xss/Xss";
 
 class App extends Component {
     constructor() {
@@ -58,8 +60,8 @@ class App extends Component {
             <div className="App">
                 <Header title="The new header title"/>
                 <Content>
-
-                    <Numbers/>
+                    <Xss/>
+                    {/*<Numbers/>*/}
                     {/*<Animation/>*/}
                     {/*<Chart*/}
                         {/*columns={this.columns}*/}
