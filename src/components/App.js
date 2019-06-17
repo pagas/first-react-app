@@ -11,11 +11,12 @@ import Content from "../shared/components/layout/Content";
 // import Chart from "./Chart/Chart";
 // import Animation from "./Animation/Animation";
 // import Numbers from "./Numbers/Numbers";
+//import Xss from "./Xss/Xss";
+import Calculator from "./Calculator/Calculator";
 
 
 // This is our fake data...
 import {notes1, notes2} from './Notes/data';
-import Xss from "./Xss/Xss";
 
 class App extends Component {
     constructor() {
@@ -60,7 +61,8 @@ class App extends Component {
             <div className="App">
                 <Header title="The new header title"/>
                 <Content>
-                    <Xss/>
+                    <Calculator/>
+                    {/*<Xss/>*/}
                     {/*<Numbers/>*/}
                     {/*<Animation/>*/}
                     {/*<Chart*/}
