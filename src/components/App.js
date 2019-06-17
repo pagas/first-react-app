@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import '../App.css';
+import './Person/Popup.css';
 import Header from "../shared/components/layout/Header";
 import Footer from "../shared/components/layout/Footer";
 import Content from "../shared/components/layout/Content";
+import Popup from 'react-popup';
+
 // import Home from '../components/Home/Home';
 // import Todo from "./Todo/Todo";
 // import Timer from "./Pomodoro/Timer";
@@ -68,14 +71,14 @@ class App extends Component {
                     {/*<Numbers/>*/}
                     {/*<Animation/>*/}
                     {/*<Chart*/}
-                        {/*columns={this.columns}*/}
-                        {/*chartType={this.state.chartType}*/}
+                    {/*columns={this.columns}*/}
+                    {/*chartType={this.state.chartType}*/}
                     {/*/>*/}
 
                     {/*<p>*/}
-                        {/*Chart Type*/}
-                        {/*<button onClick={this.setBarChart}>Bar</button>*/}
-                        {/*<button onClick={this.setLineChart}>Line</button>*/}
+                    {/*Chart Type*/}
+                    {/*<button onClick={this.setBarChart}>Bar</button>*/}
+                    {/*<button onClick={this.setLineChart}>Line</button>*/}
                     {/*</p>*/}
                     {/*<Notes notes={this.state.notes}/>*/}
                     {/*<Coins/>*/}
@@ -84,6 +87,8 @@ class App extends Component {
                     {/*<Home/>*/}
                 </Content>
                 <Footer/>
+                <Popup/>
+
             </div>
         );
     }
