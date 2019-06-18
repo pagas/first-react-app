@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import './Timer.css';
 
 export default class Timer extends Component {
+  static displayTimer(seconds) {
+    // Formatting the time into mm:ss
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 3600 % 60);
+
+    return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  }
+
   constructor() {
     super();
     this.state = {
@@ -98,14 +106,6 @@ export default class Timer extends Component {
       }
     };
 
-    displayTimer(seconds) {
-      // Formatting the time into mm:ss
-      const m = Math.floor(seconds % 3600 / 60);
-      const s = Math.floor(seconds % 3600 % 60);
-
-      return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
-    }
-
     render() {
       const { alert: { message, type }, time } = this.state;
 
@@ -121,6 +121,7 @@ export default class Timer extends Component {
 
           <div className="types">
             <button
+              type="button"
               className="start"
               onClick={this.setTimeForWork}
             >
