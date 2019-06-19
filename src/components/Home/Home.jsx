@@ -18,14 +18,14 @@ export default class home extends Component {
   }
 
   render() {
-    console.log('re-render is called');
+    const { name } = this.state;
     return (
       <div className="Home">
         <h1>Welcome to Codejobs</h1>
 
         <p>
 Hi my name is
-          {this.state.name}
+          {name}
           {' '}
 
         </p>
