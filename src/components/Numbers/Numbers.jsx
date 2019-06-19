@@ -17,7 +17,6 @@ class Numbers extends Component {
     };
 
     componentDidUpdate() {
-      console.log('Number comp udpate');
     }
 
     handleNumberChange = e => {
