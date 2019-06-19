@@ -8,7 +8,10 @@ const formatTime = 'YYYY-MM-DD HH:mm:ss';
 
 class Notes extends Component {
     static propTypes = {
-      notes: PropTypes.arrayOf(PropTypes.string).isRequired
+      notes: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string,
+        content: PropTypes.string
+      })).isRequired
     };
 
     constructor() {
