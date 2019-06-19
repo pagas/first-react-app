@@ -55,7 +55,7 @@ List.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     task: PropTypes.string,
-    completed: PropTypes.string
+    completed: PropTypes.bool
   })),
   markAsCompleted: PropTypes.func,
   removeTask: PropTypes.func
