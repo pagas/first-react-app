@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 class Chart extends Component {
     static propTypes = {
-      columns: PropTypes.arrayOf([PropTypes.string, PropTypes.number]),
+      columns: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))),
       chartType: PropTypes.string,
     };
 
