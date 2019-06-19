@@ -116,7 +116,7 @@ export default class Timer extends Component {
           </div>
 
           <div className="timer">
-            {this.displayTimer(time)}
+            {Timer.displayTimer(time)}
           </div>
 
           <div className="types">
