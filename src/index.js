@@ -3,8 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import { BrowserRouter as Router } from 'react-router-dom';
+// Routes
+import AppRoutes from './routes';
 import * as serviceWorker from './serviceWorker';
+
 
 const unmountButton = document.getElementById('unmount');
 
@@ -27,7 +30,11 @@ unmountButton.addEventListener('click', unmount);
 document.getElementById('unmountMessage')
   .style.display = 'none';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Router>
+    <AppRoutes />
+  </Router>,
+  document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

@@ -11,7 +11,7 @@ const Content = props => {
 };
 
 Content.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired
+  children: PropTypes.element.isRequired
 };
 
 export default Content;
