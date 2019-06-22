@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import './Person/Popup.css';
 import Popup from 'react-popup';
+import Helmet from 'react-helmet';
 import Header from '../shared/components/layout/Header';
 import Footer from '../shared/components/layout/Footer';
 import Content from '../shared/components/layout/Content';
@@ -65,6 +66,13 @@ class App extends Component {
       const { chartType, notes } = this.state;
       return (
         <div className="App">
+          <Helmet
+            title="Person Information"
+            meta={[
+              { name: 'title', content: 'Person Information' },
+              { name: 'description', content: 'This recipe talks about React Helmet' }
+            ]}
+          />
           <Header title="The new header title" />
           <Content>
             <Person />
