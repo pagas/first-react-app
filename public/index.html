@@ -43,6 +43,21 @@
     <div id="unmountMessage">There is no mounted component!</div>
 
 
+    <script>
+        // Detecting the user device
+        const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+
+        // Creating our initialState
+        const initialState = {
+            device: {
+                isMobile
+            }
+        };
+
+        // Saving our initialState to the window object
+        window.initialState = initialState;
+    </script>
+
 
     <!--
       This HTML file is a template.

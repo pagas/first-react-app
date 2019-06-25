@@ -1,9 +1,35 @@
 import React from 'react';
+import { bool } from 'prop-types';
+import { connect } from 'react-redux';
 
-const Home = () => (
-  <div className="Home">
-    <h1>Home</h1>
-  </div>
-);
+const Home = props => {
+  const { isMobile } = props;
+  return (
 
-export default Home;
+    <div className="Home">
+      <h1>Home</h1>
+      <p>
+                    You are using:
+        <strong>{isMobile ? 'mobile' : 'desktop'}</strong>
+      </p>
+    </div>
+  );
+};
+
+Home.propTypes = {
+  isMobile: bool
+};
+
+
+function mapStateToProps(state) {
+  return {
+    isMobile: state.device.isMobile
+  };
+}
+
+function mapDispatchToProps() {
+  return {};
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
